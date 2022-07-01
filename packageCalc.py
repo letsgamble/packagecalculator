@@ -15,11 +15,13 @@ import sys
 #     print('Element weight:', element_weight)
 #     print('Total elements weight:', current_element_weight)
 
-file_name = str(input('Please enter import file name: '))
-element_weight = int()
+current_elements_weight = int()
 
-with open(file_name) as file:
+with open('in.txt') as file:
     for element_weight in file:
-        print(element_weight, end='')
-        if 'str' in element_weight:
+        if 1 < int(element_weight) <= 10:
+            current_elements_weight += int(element_weight)
+            print('Current total weight:', current_elements_weight)
+        else:
+            print('Wrong value provided! Program stopped.')
             break
