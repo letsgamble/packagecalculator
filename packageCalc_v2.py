@@ -40,6 +40,10 @@ for elements_list in range(1, how_many_elements+1):
 
 if package_weight > 0:
     package_counter += 1
+    unused_space = (20 - package_weight)
+    if unused_space > most_unused_space:
+        most_unused_space = unused_space
+        most_unused_space_no = package_counter
 
 not_optimal_weight = package_counter * 20 - total_weight_sent
 
