@@ -15,7 +15,6 @@ most_unused_space_no = int()
 
 for elements_list in range(1, how_many_elements+1):
     elements_list = int(input())
-    print(elements_list)
     element_weight = elements_list
     if element_weight == 0:
         print('Value 0 detected. Program stopped, calculations until this point.')
